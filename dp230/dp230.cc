@@ -36,27 +36,17 @@ bool find_child(J const& j, Path& path, std::string const& target)
   {
     case json::value_t::object:
       return for_each_child(j, path, target,
-        [&](json::const_iterator it) {return it.key() == target;},
-        [](json::const_iterator it) {return it.key();},
-        [](json::const_iterator it) {return it.value();}
+        [&](json::const_iterator it) { return it.key() == target; },
+        [](json::const_iterator it) { return it.key(); },
+        [](json::const_iterator it) { return it.value(); }
       );
-      break;
 
     case json::value_t::array:
-      for (auto it = j.begin(); it != j.end(); ++it)
-      {
-        if (*it != target) {
-          if (find_child(*it, path, target)) {
-            path.push_front(std::to_string(std::distance(j.begin(), it)));
-            return true;
-          }
-        } else {
-          path.push_front(std::to_string(std::distance(j.begin(), it)));
-          return true;
-        }
-      }
-      return false;
-      break;
+      return for_each_child(j, path, target,
+        [&](json::const_iterator it) { return *it == target; },
+        [&](json::const_iterator it) { return std::to_string(std::distance(j.begin(), it)); },
+        [](json::const_iterator it) { return *it; }
+      );
 
     default:
       return false;
