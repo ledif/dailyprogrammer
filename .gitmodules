@@ -1,0 +1,3 @@
+[submodule "lib/cpp/Streams"]
+	path = lib/cpp/Streams
+	url = git@github.com:jscheiny/Streams.git
