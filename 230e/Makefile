@@ -1,5 +1,5 @@
 build:
-	clang++ -std=c++11 -O3 -I/usr/local/Cellar/boost/1.54.0/include/ -o dp230 dp230.cc
+	clang++ -std=c++11 -O3 -I$(BOOST_ROOT)/include/ -I../lib/cpp/json/src -o 230e 230e.cc
 
 challenge1.txt:
 	wget https://gist.githubusercontent.com/anonymous/8f35cc4fbbccf6d3f59f/raw/1f9786fc2fec9a7afa20cdd70d2d8afb7d3aecb9/challenge1.txt

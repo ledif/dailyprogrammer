@@ -1,3 +1,6 @@
 [submodule "lib/cpp/Streams"]
 	path = lib/cpp/Streams
 	url = git@github.com:jscheiny/Streams.git
+[submodule "lib/cpp/json"]
+	path = lib/cpp/json
+	url = git@github.com:nlohmann/json.git
