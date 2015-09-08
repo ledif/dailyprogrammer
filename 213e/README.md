@@ -1,4 +1,4 @@
-# The Dottie Number
+# Cellular Automata: Rule 90
 *Challenge #213 [Easy]*
 https://www.reddit.com/r/dailyprogrammer/comments/3jz8tt/20150907_challenge_213_easy_cellular_automata/
 
@@ -31,5 +31,5 @@ $ ./213e < inputs/triangle
                            x   x   x   x                   x   x   x   x
                           x x x x x x x x                 x x x x x x x x
                          x               x               x               x
-                        x x             x x             x x             x x                       
+                        x x             x x             x x             x x
 ```
