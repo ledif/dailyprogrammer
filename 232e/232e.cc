@@ -16,7 +16,7 @@ int main(int argc, char* argv[])
 
   std::size_t mid = str.size() / 2;
 
-  const bool is_palindrome = std::equal(str.begin(), str.begin() + mid, str.rbegin());
+  const bool is_palindrome = std::equal(str.cbegin(), str.cbegin() + mid, str.crbegin());
 
   std::cout << (is_palindrome ? "Palindrome" : "Not a palindrome") << std::endl;
 
